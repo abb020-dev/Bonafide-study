@@ -865,6 +865,7 @@ inputs.push({
   version: 1
 });
 
+/*
 // --- Explanation Version 2 (old one, now labeled) ---
 const expV2Label = document.createElement("label");
 expV2Label.textContent = language === "en" ? "Transcribed Version" : "버전 2";
@@ -923,6 +924,7 @@ inputs.push({
   type: "explanation",
   version: 2
 });
+*/
 
 // ✅ THIS is what makes the question actually show up:
 container.appendChild(questionDiv);
@@ -959,7 +961,7 @@ function checkAllAnswered(questions, twoInputs = false) {
     );
 
     // 🔥 Expectation check (prevents ghost/extra question bugs)
-    const expectedCount = twoInputs ? 4 : 2;
+    const expectedCount = twoInputs ? 3 : 2;
 
     if (relatedInputs.length !== expectedCount) {
       console.warn("Wrong number of inputs for question", i, relatedInputs);
