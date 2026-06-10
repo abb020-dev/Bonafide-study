@@ -961,7 +961,7 @@ function checkAllAnswered(questions, twoInputs = false) {
     );
 
     // 🔥 Expectation check (prevents ghost/extra question bugs)
-    const expectedCount = twoInputs ? 3 : 2;
+    const expectedCount = twoInputs ? 2 : 2;
 
     if (relatedInputs.length !== expectedCount) {
       console.warn("Wrong number of inputs for question", i, relatedInputs);
