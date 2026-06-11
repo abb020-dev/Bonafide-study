@@ -188,7 +188,7 @@ let session3Questions = {
 //Next Steps: Determine anticipated duration 
 let sessionInstructions = {
   session1: {
-    en: "Complete each question yourself without using ChatGPT or any other external help.\nAnticipated duration: 30-40 minutes.",
+    en: "Complete each question yourself without using ChatGPT or any other external help.\nEnsure to have your screen view on fullscreen and do not zoom in or out.\nAnticipated duration: 30-40 minutes.",
     ko: "각 질문에 대해 ChatGPT나 다른 외부의 도움없이 답변을 직접 작성하십시오.\n각 질문에 100~120 단어 내외로 작성하십시오.\n예상 소요 시간: 30~40분."
   },
   //Added Code: Changed questions to be specific to coding
