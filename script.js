@@ -103,12 +103,33 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-    "Write the Python statement that assigns the value 10 to a variable named radius.",
-    'Below is an example showing how to calculate the area of a rectangle using two variables(length and width) and the * operator:\nlength = 10 width = 5\narea = length * width\n print("The area of the rectangle is:", area)\nUsing your understanding of how this code works and how the * operator performs multiplication,write your own line of Python code that calculates the volume of a sphere using one variable named radius set to the value of 2 and the formula: V=4/3πr^3',
-    "Use a for loop to print the cubes of the numbers 1–5.",
-    "Write two versions of Python code that each calculate the sum of all numbers from 1 to 100: Method 1: Use a for loop to add the numbers from 1 through 100 and print the total. Method 2: Write a single line of code that manually adds each number individually (for example, 1 + 2 + 3 + ... + 100). After writing both, include a comment explaining why the for loop method is easier, shorter, or more efficient than manually adding each number.",
-    "The following code is supposed to calculate and print the volume of a sphere, but it contains several errors. Code: radius = input(Enter the radius)volume = 4/3 * 3.14159 * radius ^ 3 print(The volume of the sphere is + volume) Looking at this code, define the errors in a comment and debug the code to fix the problem.",
-    "Write a Python program that asks the user to enter:the total cost of several items, and the total number of items purchased. Then calculate and print the average cost per item using the formula: average cost=total cost/number of items. Your program should use variables, arithmetic operators, and print() statements as shown in Chapter 1."
+  "Write a Python program that defines five variables: an integer, a float, a string, a boolean, and a list. Print each variable and use type() to display its data type.",
+
+  "Below is an example showing how to calculate the area of a rectangle using two variables (length and width) and the * operator:\n\n" +
+  "length = 10\n" +
+  "width = 5\n" +
+  "area = length * width\n" +
+  "print(\"The area of the rectangle is:\", area)\n\n" +
+  "Using your understanding of how this code works and how the * operator performs multiplication, write your own line of Python code that calculates the area of a rectangle, but with different variable names.",
+
+  "Write a Python program that uses a for loop to compute the sum of all odd numbers between 1 and 100, then print the total. Use a conditional inside the loop to identify odd numbers.",
+
+  "Below is a Python program:\n\n" +
+  "numbers = [2, 5, 8, 11, 14]\n" +
+  "total = 0\n" +
+  "for n in numbers:\n" +
+  "    total += n\n" +
+  "print(\"Sum:\", total)\n\n" +
+  "Rewrite the program into two functions: one that calculates the total and another that prints it. Include comments to distinguish which lines perform computation and which handle output.",
+
+  "Write two Python programs that calculate the factorial of a number: one using recursion and one using a loop. After running both, evaluate which version is faster by counting iterations and explain the result in a short printed summary.",
+
+  "Construct a Python program that simulates a basic ATM system using predefined transactions (no user input). The program should:\n" +
+  "1. Process deposits and withdrawals from a preset list of transactions.\n" +
+  "2. Maintain and update the account balance.\n" +
+  "3. Prevent withdrawals that exceed the available balance.\n" +
+  "4. Do not use any input functions.\n" +
+  "5. Use functions and loops to organize your solution."
   ],
   ko: [
     "좋아하는 한국 드라마/소설/영화 등의 줄거리를 요약하십시오 (100~120단어 사이)",
