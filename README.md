@@ -1,1 +1,1 @@
-# Bonafide-study
+# bonafide-study
