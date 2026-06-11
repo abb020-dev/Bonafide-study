@@ -103,7 +103,7 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-  "Write a Python program that defines five variables: an integer, a float, a string, a boolean, and a list. Print each variable and use type() to display its data type.",
+  "In Python, write a program that defines five variables: an integer, a float, a string, a boolean, and a list. Print each variable and use type() to display its data type.",
 
   "Below is an example showing how to calculate the area of a rectangle using two variables (length and width) and the * operator:\n\n" +
   "length = 10\n" +
