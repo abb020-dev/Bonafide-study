@@ -409,7 +409,7 @@ function renderQuestions(container, questions, twoInputs = false) {        // �
       const leftDiv = document.createElement("div");
       leftDiv.className = "input-column left";
       const label1 = document.createElement("label");
-      label1.textContent = language === "en" ? "ChatGPT Version" : "버전 1";
+      label1.textContent = language === "en" ? "Explanation Box" : "버전 1";
       leftDiv.appendChild(label1);
 
       // ---- Python CodeMirror Editor #1 ----
@@ -811,7 +811,7 @@ questionDiv.appendChild(explanationLabel);
 
 // --- Explanation Version 1 (new, above) ---
 const expV1Label = document.createElement("label");
-expV1Label.textContent = language === "en" ? "ChatGPT Version" : "버전 1";
+expV1Label.textContent = language === "en" ? "Explanation Box" : "버전 1";
 questionDiv.appendChild(expV1Label);
 
 const explanationBoxV1 = document.createElement("textarea");
