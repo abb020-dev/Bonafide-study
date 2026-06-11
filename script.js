@@ -5,7 +5,7 @@
 // -------------------------
 let pyWorker = null;
 let workerReady = false;
-let sessionNumber = 2; //Session number for tracking purposes
+let sessionNumber = 1; //Session number for tracking purposes
 
 // Global variables to store inputs, keystrokes, and user information
 const questionsMap = {};
@@ -1025,12 +1025,11 @@ function submitForm() {
 
 if (currentSession === 1) {
   responses = session1Questions[language].map((q, i) => ({
-    session: 1,
+    session: sessionNumber,
     question: q,
+    q_id: i + 1,
     code: inputs[i * 2].element.getValue(),
-    explanation: inputs[i * 2 + 1].element.value,
-    codeWordCount: getWordCount(inputs[i * 2].element.getValue()),
-    explanationWordCount: getWordCount(inputs[i * 2 + 1].element.value)
+    explanation: inputs[i * 2 + 1].element.value
   }));
 }
 
@@ -1133,9 +1132,9 @@ if (currentSession === 3) {
     let userInfoUrl = URL.createObjectURL(userInfoBlob);
 
     // Create link elements to trigger the downloads
-    createDownloadLink(responseBlob, 's2_responses.json');
-    createDownloadLink(keystrokeBlob, 's2_keystrokes.json');
-    createDownloadLink(userInfoBlob, 's2_user_info.json');
+    createDownloadLink(responseBlob, 's1_responses.json');
+    createDownloadLink(keystrokeBlob, 's1_keystrokes.json');
+    createDownloadLink(userInfoBlob, 's1_user_info.json');
 
     // Show thank you message with buttons to manually download files if needed
     showThankYouMessage(responseBlob, keystrokeBlob, userInfoBlob);
@@ -1158,9 +1157,9 @@ function showThankYouMessage(responseBlob, keystrokeBlob, userInfoBlob) {
 
   let list = document.createElement('ul');
   list.innerHTML = `
-    <li>s2_responses.json</li>
-    <li>s2_keystrokes.json</li>
-    <li>s2_user_info.json</li>
+    <li>s1_responses.json</li>
+    <li>s1_keystrokes.json</li>
+    <li>s1_user_info.json</li>
   `;
   container.appendChild(list);
 
@@ -1168,9 +1167,9 @@ function showThankYouMessage(responseBlob, keystrokeBlob, userInfoBlob) {
   let buttonContainer = document.createElement('div');
   buttonContainer.className = 'button-container';
 
-  buttonContainer.appendChild(createDownloadButton(responseBlob, 's2_responses.json', language === 'en' ? 'Download Responses' : '응답 데이터 다운로드'));
-  buttonContainer.appendChild(createDownloadButton(keystrokeBlob, 's2_keystrokes.json', language === 'en' ? 'Download Keystrokes' : '키 데이터 다운로드'));
-  buttonContainer.appendChild(createDownloadButton(userInfoBlob, 's2_user_info.json', language === 'en' ? 'Download Demographics' : '사용자 정보 다운로드'));
+  buttonContainer.appendChild(createDownloadButton(responseBlob, 's1_responses.json', language === 'en' ? 'Download Responses' : '응답 데이터 다운로드'));
+  buttonContainer.appendChild(createDownloadButton(keystrokeBlob, 's1_keystrokes.json', language === 'en' ? 'Download Keystrokes' : '키 데이터 다운로드'));
+  buttonContainer.appendChild(createDownloadButton(userInfoBlob, 's1_user_info.json', language === 'en' ? 'Download Demographics' : '사용자 정보 다운로드'));
 
   container.appendChild(buttonContainer);
 
