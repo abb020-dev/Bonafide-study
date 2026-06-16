@@ -849,7 +849,7 @@ explanationLabel.textContent =
   `Describe the purpose of each significant line or function.`;
 questionDiv.appendChild(explanationLabel);
 
-// --- Explanation Version 1 (new, above) ---
+// --- Explanation Version 1 why is sync not working (new, above) ---
 const expV1Label = document.createElement("label");
 expV1Label.textContent = language === "en" ? "Explanation Box" : "버전 1";
 questionDiv.appendChild(expV1Label);
