@@ -726,6 +726,26 @@ stopBtn2.addEventListener("click", () => {
   //questions[i + 1] = q;
   editor._lastMouseLog = 0;
 ensureCodeMirrorFocus(editor);
+editor.on("beforeChange", (cm, change) => {
+    if (change.origin === "paste") {
+        change.cancel();
+    }
+});
+
+const wrapper = editor.getWrapperElement();
+
+wrapper.addEventListener("paste", e => e.preventDefault());
+wrapper.addEventListener("copy", e => e.preventDefault());
+wrapper.addEventListener("cut", e => e.preventDefault());
+
+editor.on("keydown", (cm, e) => {
+    if (
+        (e.ctrlKey || e.metaKey) &&
+        ["c", "v", "x"].includes(e.key.toLowerCase())
+    ) {
+        e.preventDefault();
+    }
+});
 editor.on("cursorActivity", (cm) => {
   const meta = editor._meta;
   const cursor = cm.getCursor();
@@ -838,6 +858,18 @@ const explanationBoxV1 = document.createElement("textarea");
 explanationBoxV1.className = "explanation-box";
 explanationBoxV1.rows = 6;
 questionDiv.appendChild(explanationBoxV1);
+explanationBoxV1.addEventListener("paste", e => e.preventDefault());
+explanationBoxV1.addEventListener("copy", e => e.preventDefault());
+explanationBoxV1.addEventListener("cut", e => e.preventDefault());
+
+explanationBoxV1.addEventListener("keydown", (e) => {
+    if (
+        (e.ctrlKey || e.metaKey) &&
+        ["c", "v", "x"].includes(e.key.toLowerCase())
+    ) {
+        e.preventDefault();
+    }
+});
 
 explanationBoxV1._meta = {
   inputType: "explanation",
