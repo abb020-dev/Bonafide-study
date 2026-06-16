@@ -469,8 +469,15 @@ function renderQuestions(container, questions, twoInputs = false) {        // ðŸ
       editor1._lastMouseLog = 0;
 
       ensureCodeMirrorFocus(editor1);
-
+      editor1.on("beforeChange", (cm, change) => {
+        if (change.origin === "paste") {
+          change.cancel();
+        }
+      });
       const wrapper1 = editor1.getWrapperElement();
+        wrapper1.addEventListener("paste", e => e.preventDefault());
+        wrapper1.addEventListener("copy",  e => e.preventDefault());
+        wrapper1.addEventListener("cut",   e => e.preventDefault());
 
       //Added Code: fully added both editor1on functions
         editor1.on('change', () => {
@@ -631,9 +638,9 @@ editor2.on("beforeChange", (cm, change) => {
 });
 
 const wrapper2 = editor2.getWrapperElement();
-wrapper2.addEventListener("paste", e => e.preventDefault());
-wrapper2.addEventListener("copy",  e => e.preventDefault());
-wrapper2.addEventListener("cut",   e => e.preventDefault());
+  wrapper2.addEventListener("paste", e => e.preventDefault());
+  wrapper2.addEventListener("copy",  e => e.preventDefault());
+  wrapper2.addEventListener("cut",   e => e.preventDefault());
       //Added Code: Fully added editor 2 on
       editor2.on('change', () => {
         updateWordCountEditor(editor2, wordCountDiv);
