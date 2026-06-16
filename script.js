@@ -519,7 +519,10 @@ leftDiv.appendChild(output1);
 let currentRunId1 = null;
 
 runBtn1.addEventListener("click", () => {
-  const code = editor1.getValue().trim();
+  let code = editor1.getValue().trim();
+
+  // Convert all tabs to 4 spaces
+  code = code.replace(/\t/g, "    ");
 
   if (!workerReady) {
     output1.textContent = "Python still loading... Press run button again.";
@@ -660,7 +663,10 @@ rightDiv.appendChild(output2);
 let currentRunId2 = null;
 
 runBtn2.addEventListener("click", () => {
-  const code = editor2.getValue().trim();
+  let code = editor2.getValue().trim();
+
+  // Convert all tabs to 4 spaces
+  code = code.replace(/\t/g, "    ");
 
   if (!workerReady) {
     output2.textContent = "Python still loading... Press run button again.";
@@ -711,13 +717,30 @@ stopBtn2.addEventListener("click", () => {
   let textarea = document.createElement("textarea");
   questionDiv.appendChild(textarea);
 
-  let editor = CodeMirror.fromTextArea(textarea, {
-    lineNumbers: true,
-    mode: "python",
-    theme: "default",
-    indentUnit: 4,
-    smartIndent: true,
-  });
+      let editor = CodeMirror.fromTextArea(textarea, {
+        lineNumbers: true,
+        lineNumbers: true,
+        mode: "python",
+        theme: "default",
+        indentUnit: 4,
+        smartIndent: true,
+        indentWithTabs: false,
+        extraKeys: {
+        Tab: function(cm) {
+          cm.replaceSelection("    ");
+        },
+        Backspace: function(cm) {
+          let cursor = cm.getCursor();
+          let line = cm.getLine(cursor.line);
+
+          if (cursor.ch >= 4 && line.slice(cursor.ch - 4, cursor.ch) === "    ") {
+            cm.replaceRange("", {line: cursor.line, ch: cursor.ch - 4}, cursor);
+          } else {
+            cm.execCommand("delCharBefore");
+          }
+        }
+      }
+});
   editor._meta = {
     inputType: "code",
     version: 1,
@@ -798,7 +821,10 @@ questionDiv.appendChild(outputSingle);
 let currentRunId = null;
 
 runBtn.addEventListener("click", () => {
-  const code = editor.getValue().trim();
+  let code = editor.getValue().trim();
+
+  // Convert all tabs to 4 spaces
+  code = code.replace(/\t/g, "    ");
 
   if (!workerReady) {
     outputSingle.textContent = "Python still loading... Press run button again.";
