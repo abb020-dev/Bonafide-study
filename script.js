@@ -103,7 +103,19 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-"Write a Python program that defines one integer, one float, one string, one boolean, and one list.\n\nUse descriptive variable names that clearly indicate their purpose. Use longer variable names to improve readability and separate multiple words with underscores (for example, student_name or triangle_area). Use any valid values.\n\nUse the print() function and type() function to print each value and its data type in the following format:\n\n[value] is a [data type]\n\nExample output\n\n10 is a <class 'int'>",
+`Write a Python program that defines one <strong>integer</strong>, one <strong>float</strong>, one <strong>string</strong>, one <strong>boolean</strong>, and one <strong>list</strong>.
+
+Use <strong>descriptive variable names</strong> that clearly indicate what each variable represents. If a variable name contains multiple words, separate the words with underscores, such as student_name or triangle_area.
+
+Use any valid values.
+
+Use the <strong>print()</strong> function and the <strong>type()</strong> function to print each value and its data type in the following format:
+
+\t[value] is a [data type]
+
+Example output:
+
+\t10 is a &lt;class 'int'&gt;`,
 
 `The following Python code calculates the area of a rectangle:
 
@@ -128,9 +140,9 @@ Use the <strong>print()</strong> function to display the result in the following
 
 Use an <strong>if statement</strong> inside the loop to determine whether each number is odd.
 
-Hint: A number is odd when number % 2 != 0.
+Hint: A number is even when number % 2 == 0.
 
-Use descriptive variable names, such as current_number and odd_number_sum.
+Use descriptive variable names.
 
 Use the <strong>print()</strong> function to display the result in the following format:
 
@@ -138,13 +150,13 @@ Use the <strong>print()</strong> function to display the result in the following
 
 `The following Python program calculates and prints the sum of all values in a list:
 
-\tnumbers = [2, 5, 8, 11, 14]
-\ttotal = 0
-
-\tfor current_number in numbers:
-\t\ttotal += current_number
-
-\tprint("Sum:", total)
+\t1. numbers = [2, 5, 8, 11, 14]
+\t2. total = 0
+\t3.
+\t4. for current_number in numbers:
+\t5.\ttotal += current_number
+\t6.
+\t7. print("Sum:", total)
 
 Rewrite the program using <strong>three functions</strong>:
 
@@ -173,7 +185,7 @@ Both functions should accept n as a parameter and return the factorial of n.
 
 Write a <strong>main()</strong> function that defines a value for n, calls both factorial functions, and prints both results.
 
-After writing both functions, choose which approach you recommend based on <strong>readability</strong> and <strong>efficiency</strong>. Add a short comment or docstring explaining your choice in 1-2 sentences.
+After writing both functions, choose which approach you recommend based on <strong>readability</strong> and <strong>efficiency</strong>, and add a short <strong>docstring</strong> in your chosen function explaining your choice in 1-2 sentences.
 
 Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`,
 
@@ -239,7 +251,7 @@ After all transactions have been processed, print:
 \tFinal account balance: [final_balance]
 
 Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`
-  ],
+],
   ko: [
     "한국의 세 가지 공휴일의 이름과 각각의 의미를 간략히 설명하십시오 (150~200 단어 사이)",
     "한국 요리가 국제적으로 인기를 끌게 된 이유를 설명하십시오 (150~200 단어 사이)",
@@ -527,7 +539,7 @@ function renderQuestions(container, questions, twoInputs = false) {        // �
     questionDiv.className = "question-block";
 
     const questionLabel = document.createElement("h3");
-    questionLabel.textContent = `${i + 1}. ${q}`;
+    questionLabel.innerHTML = `${i + 1}. ${q}`;
     questionDiv.appendChild(questionLabel);
 
     const wordCountDiv = document.createElement("div");
