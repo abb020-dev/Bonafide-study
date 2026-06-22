@@ -150,30 +150,23 @@ Use the <strong>print()</strong> function to display the result in the following
 
 `The following Python program calculates and prints the sum of all values in a list:
 
-\t1. numbers = [2, 5, 8, 11, 14]
-\t2. total = 0
-\t3.
-\t4. for current_number in numbers:
-\t5.\ttotal += current_number
-\t6.
-\t7. print("Sum:", total)
+\tnumbers = [2, 5, 8, 11, 14]
+\ttotal = 0
+
+\tfor current_number in numbers:
+\t\ttotal += current_number
+
+\tprint("Sum:", total)
 
 Rewrite the program using <strong>three functions</strong>:
 
-\t1. A function that accepts a list as a parameter and returns the sum of its elements.
+\t- one function that accepts a list and returns the sum
+\t- one function that prints: Sum of the numbers in the list: [total]
+\t- one main() function that creates the list and calls the other two functions
 
-\t2. A function that accepts the total as a parameter and prints it in the following format:
+Use <strong>descriptive names</strong> for functions, parameters, and variables.
 
-\t\tSum of the numbers in the list: [total]
-
-\t3. A main() function that creates the list, calls the first function to calculate the total, and calls the second function to display the result.
-
-Use <strong>descriptive function names</strong>, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.
-
-Add comments to identify:
-
-\t- lines that perform computation
-\t- lines that perform print/output`,
+Add comments to identify lines that perform <strong>computation</strong> and lines that perform <strong>print/output</strong>.`,
 
 `Write <strong>two Python functions</strong> that calculate the factorial of a non-negative integer n.
 
@@ -191,67 +184,26 @@ Use descriptive function names, parameter names, and variable names. If a name c
 
 `Construct a Python program that simulates a basic <strong>ATM system</strong> using predefined transactions. Do <strong>not</strong> use the input() function.
 
-Use the following starting balance and transaction list:
+Use this starting data:
 
 \tstarting_balance = 1000
-
 \ttransaction_list = [
-\t\t("deposit", 200),
-\t\t("withdraw", 150),
-\t\t("withdraw", 1200),
-\t\t("deposit", 3000),
-\t\t("withdraw", 1200),
-\t\t("deposit", 4000),
+\t\t("deposit", 200), ("withdraw", 150),
+\t\t("withdraw", 1200), ("deposit", 3000),
+\t\t("withdraw", 1200), ("deposit", 4000)
 \t]
 
-Your program must include the following functions:
+Your program must:
 
-<strong>deposit_money(current_balance, transaction_amount)</strong>
+\t- define deposit_money(current_balance, transaction_amount) to return the updated balance
+\t- define withdraw_money(current_balance, transaction_amount) to return the updated balance and whether the withdrawal was successful
+\t- print "Withdrawal denied. Insufficient funds." when a withdrawal is denied
+\t- define main() to loop through the transactions, call the correct function, and update the balance
+\t- after each successful transaction, print: Transaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]
+\t- after all transactions, print: Final account balance: [final_balance]
 
-This function should:
-
-\t- accept the current account balance and the deposit amount as parameters
-\t- increase the account balance by the deposit amount
-\t- return the updated balance
-
-<strong>withdraw_money(current_balance, transaction_amount)</strong>
-
-This function should:
-
-\t- accept the current account balance and the withdrawal amount as parameters
-\t- decrease the account balance only if sufficient funds are available
-\t- return two values: the updated balance and whether the withdrawal was successful
-\t- print the following message if funds are insufficient:
-
-\tWithdrawal denied. Insufficient funds.
-
-<strong>main()</strong>
-
-This function should:
-
-\t- define starting_balance
-\t- define transaction_list
-\t- use a for loop to process every transaction
-\t- use if statements to determine the transaction type
-\t- call deposit_money() for deposit transactions
-\t- call withdraw_money() for withdrawal transactions
-\t- print a message after every successful deposit or withdrawal
-\t- print the final account balance after all transactions have been processed
-
-After every successful deposit or withdrawal, print the transaction information in the following format:
-
-\tTransaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]
-
-Example:
-
-\tTransaction: deposit, Amount: 200, Balance: 1200
-
-After all transactions have been processed, print:
-
-\tFinal account balance: [final_balance]
-
-Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`
-],
+Use descriptive function names, parameter names, and variable names.`
+  ],
   ko: [
     "한국의 세 가지 공휴일의 이름과 각각의 의미를 간략히 설명하십시오 (150~200 단어 사이)",
     "한국 요리가 국제적으로 인기를 끌게 된 이유를 설명하십시오 (150~200 단어 사이)",
