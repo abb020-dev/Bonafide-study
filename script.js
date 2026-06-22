@@ -103,19 +103,7 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-`Write a Python program that defines one <strong>integer</strong>, one <strong>float</strong>, one <strong>string</strong>, one <strong>boolean</strong>, and one <strong>list</strong>.
-
-Use <strong>descriptive variable names</strong> that clearly indicate what each variable represents. If a variable name contains multiple words, separate the words with underscores, such as student_name or triangle_area.
-
-Use any valid values.
-
-Use the <strong>print()</strong> function and the <strong>type()</strong> function to print each value and its data type in the following format:
-
-\t[value] is a [data type]
-
-Example output:
-
-\t10 is a &lt;class 'int'&gt;`,
+"Write a Python program that defines one integer, one float, one string, one boolean, and one list.\n\nUse descriptive variable names that clearly indicate their purpose. Use longer variable names to improve readability and separate multiple words with underscores (for example, student_name or triangle_area). Use any valid values.\n\nUse the print() function and type() function to print each value and its data type in the following format:\n\n[value] is a [data type]\n\nExample output\n\n10 is a <class 'int'>",
 
 `The following Python code calculates the area of a rectangle:
 
