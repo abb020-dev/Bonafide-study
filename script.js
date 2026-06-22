@@ -103,41 +103,158 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-  "In Python, write a program that defines five variables: an integer, a float, a string, a boolean, and a list. Print each variable and use type() to display its data type.",
+`Write a Python program that defines one integer, one float, one string, one boolean, and one list.
 
-  "Below is an example showing how to calculate the area of a rectangle using two variables (length and width) and the * operator:\n\n" +
-  "length = 10\n" +
-  "width = 5\n" +
-  "area = length * width\n" +
-  "print(\"The area of the rectangle is:\", area)\n\n" +
-  "Using your understanding of how this code works and how the * operator performs multiplication, write your own line of Python code that calculates the area of a rectangle, but with different variable names.",
+Use descriptive variable names that clearly indicate what each variable represents. If a variable name contains multiple words, separate the words with underscores, such as student_name or triangle_area.
 
-  "Write a Python program that uses a for loop to compute the sum of all odd numbers between 1 and 100, then print the total. Use a conditional inside the loop to identify odd numbers.",
+Use any valid values.
 
-  "Below is a Python program:\n\n" +
-  "numbers = [2, 5, 8, 11, 14]\n" +
-  "total = 0\n" +
-  "for n in numbers:\n" +
-  "    total += n\n" +
-  "print(\"Sum:\", total)\n\n" +
-  "Rewrite the program into two functions: one that calculates the total and another that prints it. Include comments to distinguish which lines perform computation and which handle output.",
+Use the print() function and the type() function to print each value and its data type in the following format:
 
-  "Write two Python programs that calculate the factorial of a number: one using recursion and one using a loop. After running both, evaluate which version is faster by counting iterations and explain the result in a short printed summary.",
+[value] is a [data type]
 
-  "Construct a Python program that simulates a basic ATM system using predefined transactions (no user input). The program should:\n" +
-  "1. Process deposits and withdrawals from a preset list of transactions.\n" +
-  "2. Maintain and update the account balance.\n" +
-  "3. Prevent withdrawals that exceed the available balance.\n" +
-  "4. Do not use any input functions.\n" +
-  "5. Use functions and loops to organize your solution."
+Example output:
+
+10 is a <class 'int'>`,
+
+`The following Python code calculates the area of a rectangle:
+
+length = 10
+width = 5
+area = length * width
+print("The area of the rectangle is:", area)
+
+Write a Python program that uses the same general idea to calculate the area of a triangle.
+
+Define variables for the base and height of the triangle. Use descriptive variable names, such as triangle_base and triangle_height.
+
+Use the following formula:
+
+area = (base * height) / 2
+
+Use the print() function to display the result in the following format:
+
+The area of the triangle is: [area]`,
+
+`Write a Python program that uses a for loop to calculate the sum of all odd numbers from 1 to 100, inclusive.
+
+Use an if statement inside the loop to determine whether each number is odd.
+
+Hint: A number is odd when number % 2 != 0.
+
+Use descriptive variable names, such as current_number and odd_number_sum.
+
+Use the print() function to display the result in the following format:
+
+The sum of all odd numbers from 1 to 100 is: [sum]`,
+
+`The following Python program calculates and prints the sum of all values in a list:
+
+numbers = [2, 5, 8, 11, 14]
+total = 0
+
+for current_number in numbers:
+    total += current_number
+
+print("Sum:", total)
+
+Rewrite the program using three functions:
+
+1. A function that accepts a list as a parameter and returns the sum of its elements.
+
+2. A function that accepts the total as a parameter and prints it in the following format:
+
+Sum of the numbers in the list: [total]
+
+3. A main() function that creates the list, calls the first function to calculate the total, and calls the second function to display the result.
+
+Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.
+
+Add comments to identify:
+- lines that perform computation
+- lines that perform print/output`,
+
+`Write two Python functions that calculate the factorial of a non-negative integer n.
+
+One function must use recursion.
+
+One function must use an iterative approach without recursion.
+
+Both functions should accept n as a parameter and return the factorial of n.
+
+Write a main() function that defines a value for n, calls both factorial functions, and prints both results.
+
+After writing both functions, choose which approach you recommend based on readability and efficiency. Add a short comment or docstring explaining your choice in 1-2 sentences.
+
+Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`,
+
+`Construct a Python program that simulates a basic ATM system using predefined transactions. Do not use the input() function.
+
+Use the following starting balance and transaction list:
+
+starting_balance = 1000
+
+transaction_list = [
+    ("deposit", 200),
+    ("withdraw", 150),
+    ("withdraw", 1200),
+    ("deposit", 3000),
+    ("withdraw", 1200),
+    ("deposit", 4000),
+]
+
+Your program must include the following functions:
+
+deposit_money(current_balance, transaction_amount)
+
+This function should:
+- accept the current account balance and the deposit amount as parameters
+- increase the account balance by the deposit amount
+- return the updated balance
+
+withdraw_money(current_balance, transaction_amount)
+
+This function should:
+- accept the current account balance and the withdrawal amount as parameters
+- decrease the account balance only if sufficient funds are available
+- return two values: the updated balance and whether the withdrawal was successful
+- print the following message if funds are insufficient:
+
+Withdrawal denied. Insufficient funds.
+
+main()
+
+This function should:
+- define starting_balance
+- define transaction_list
+- use a for loop to process every transaction
+- use if statements to determine the transaction type
+- call deposit_money() for deposit transactions
+- call withdraw_money() for withdrawal transactions
+- print a message after every successful deposit or withdrawal
+- print the final account balance after all transactions have been processed
+
+After every successful deposit or withdrawal, print the transaction information in the following format:
+
+Transaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]
+
+Example:
+
+Transaction: deposit, Amount: 200, Balance: 1200
+
+After all transactions have been processed, print:
+
+Final account balance: [final_balance]
+
+Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`
   ],
   ko: [
-    "좋아하는 한국 드라마/소설/영화 등의 줄거리를 요약하십시오 (100~120단어 사이)",
-    "한국 전통 예절,'정'에 관하여 설명하십시오 (100~120단어 사이)",
-    "디지털 학습 도구를 기존의 교육 방법과 어떻게 융합하여 학습 성과를 향상시킬 것인지 설명하십시오 (100~120단어 사이)",
-    "한국의 고령화 인구와 경제적 문제의 관계를 논의하십시오 (100~120단어 사이)",
-    "한국 교육 시스템의 장단점을 평가하십시오 (100~120단어 사이)",
-    "한국의 높은 청년 실업률을 해결하기 위해 필요한 변화를 서술하시오 (100~120단어 사이)"
+    "한국의 세 가지 공휴일의 이름과 각각의 의미를 간략히 설명하십시오 (150~200 단어 사이)",
+    "한국 요리가 국제적으로 인기를 끌게 된 이유를 설명하십시오 (150~200 단어 사이)",
+    "현재 대학 커리큘럼에 있어 나중에 직업 시장에 더 잘 대비할 수 있도록 개선하기 위해 변경할 요소는 무엇입니까? (150~200 단어 사이)",
+    "현대 한국 사회에 있어 유교가 미치는 영향에 대해 설명하십시오 (150~200 단어 사이)",
+    "소셜 미디어가 십대들의 정신 건강에 미치는 영향에 대하여 논의하십시오 (150~200 단어 사이)",
+    "한국 가정에서 친환경 실천을 촉진하기 위한 방안을 만드십시오 (150~200 단어 사이)"
   ]
 };
 
