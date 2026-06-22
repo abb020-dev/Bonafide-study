@@ -159,13 +159,11 @@ Use the <strong>print()</strong> function to display the result in the following
 \tprint("Sum:", total)
 
 Rewrite the program using <strong>three functions</strong>:
-
 <ul>
   <li>one function that accepts a list and returns the sum</li>
   <li>one function that prints: Sum of the numbers in the list: [total]</li>
   <li>one main() function that creates the list and calls the other two functions</li>
 </ul>
-
 Use <strong>descriptive names</strong> for functions, parameters, and variables.
 
 Add comments to identify lines that perform <strong>computation</strong> and lines that perform <strong>print/output</strong>.`,
@@ -196,7 +194,6 @@ Use this starting data:
 \t]
 
 Your program must:
-
 <ul>
   <li>define deposit_money(current_balance, transaction_amount) to return the updated balance</li>
   <li>define withdraw_money(current_balance, transaction_amount) to return the updated balance and whether the withdrawal was successful</li>
@@ -205,7 +202,6 @@ Your program must:
   <li>after each successful transaction, print: Transaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]</li>
   <li>after all transactions, print: Final account balance: [final_balance]</li>
 </ul>
-
 Use descriptive function names, parameter names, and variable names.`
   ],
   ko: [
@@ -491,7 +487,7 @@ function renderQuestions(container, questions, twoInputs = false) {        // ðŸ
   // ===== Question Rendering =====
   questions.forEach((q, i) => {
     questionsMap[i + 1] = q;
-    
+
     const questionDiv = document.createElement("div");
     questionDiv.className = "question-block";
 
