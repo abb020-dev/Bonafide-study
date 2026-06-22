@@ -140,7 +140,7 @@ The area of the triangle is: [area]`,
 
 Use an if statement inside the loop to determine whether each number is odd.
 
-Hint: A number is odd when number % 2 != 0.
+Hint: A number is even when [number] % 2 == 0.
 
 Use descriptive variable names, such as current_number and odd_number_sum.
 
