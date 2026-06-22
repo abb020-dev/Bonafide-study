@@ -103,7 +103,7 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-`Write a Python program that defines one <strong>integer</strong>, one <strong>float</strong>, one <strong>string</strong>, one <strong>boolean</strong>, and one <strong>list</strong>.
+`Write a Python program that defines 5 variables: one <strong>integer</strong>, one <strong>float</strong>, one <strong>string</strong>, one <strong>boolean</strong>, and one <strong>list</strong>.
 
 Use <strong>descriptive variable names</strong> that clearly indicate what each variable represents. If a variable name contains multiple words, separate the words with underscores, such as student_name or triangle_area.
 
@@ -120,10 +120,10 @@ Example output:
 
 `The following Python code calculates the area of a rectangle:
 
-\tlength = 10
-\twidth = 5
-\tarea = length * width
-\tprint("The area of the rectangle is:", area)
+\t1. length = 10
+\t2. width = 5
+\t3. area = length * width
+\t4. print("The area of the rectangle is:", area)
 
 Write a Python program that uses the same general idea to calculate the area of a <strong>triangle</strong>.
 
@@ -153,25 +153,25 @@ Use the <strong>print()</strong> function to display the result in the following
 
 `The following Python program calculates and prints the sum of all values in a list:
 
-\tnumbers = [2, 5, 8, 11, 14]
-\ttotal = 0
+\t1. numbers = [2, 5, 8, 11, 14]
+\t2. total = 0
+\t3.
+\t4. for current_number in numbers:
+\t5. \ttotal += current_number
 
-\tfor current_number in numbers:
-\t\ttotal += current_number
-
-\tprint("Sum:", total)
+\t6. print("Sum:", total)
 
 Rewrite the program using <strong>three functions</strong>:
 <ul>
-  <li>one function that accepts a list and returns the sum</li>
-  <li>one function that prints: Sum of the numbers in the list: [total]</li>
-  <li>one main() function that creates the list and calls the other two functions</li>
+  <li>One function that accepts a list and returns the sum</li>
+  <li>One function that prints: Sum of the numbers in the list: [total]</li>
+  <li>One main() function that creates the list and calls the other two functions</li>
 </ul>
 Use <strong>descriptive names</strong> for functions, parameters, and variables.
 
 Add comments to identify lines that perform <strong>computation</strong> and lines that perform <strong>print/output</strong>.`,
 
-`Write <strong>two Python functions</strong> that calculate the factorial of a non-negative integer n.
+`Write <strong>two Python functions</strong> that calculate the factorial of a non-negative integer n:
 <ul>
   <li>one function must use <strong>recursion</strong></li>
   <li>one function must use an <strong>iterative approach</strong> without recursion</li>
@@ -196,12 +196,12 @@ Use this starting data:
 
 Your program must:
 <ul>
-  <li>define deposit_money(current_balance, transaction_amount) to return the updated balance</li>
-  <li>define withdraw_money(current_balance, transaction_amount) to return the updated balance and whether the withdrawal was successful</li>
-  <li>print "Withdrawal denied. Insufficient funds." when a withdrawal is denied</li>
-  <li>define main() to loop through the transactions, call the correct function, and update the balance</li>
-  <li>after each successful transaction, print: Transaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]</li>
-  <li>after all transactions, print: Final account balance: [final_balance]</li>
+  <li>Define <strong>deposit_money(current_balance, transaction_amount)</strong> to return the updated balance</li>
+  <li>Define <strong>withdraw_money(current_balance, transaction_amount)</strong> to return the updated balance and whether the withdrawal was successful</li>
+  <li>When a withdrawal is denied print <strong>"Withdrawal denied. Insufficient funds."</strong></li>
+  <li>Define <strong>main()</strong> to loop through the transactions, call the correct function, and update the balance</li>
+  <li>After each successful transaction, print: <strong>Transaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]</strong></li>
+  <li>After all transactions, print: <strong>Final account balance: [final_balance]</strong></li>
 </ul>
 Use descriptive function names, parameter names, and variable names.`
   ],
