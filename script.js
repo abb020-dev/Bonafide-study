@@ -103,148 +103,152 @@ function setupWorker() {
 // Key: "Added Code:"-commented out code/added my own "Next Steps: Comment explaining something I should do in future"
 let session1Questions = {
   en: [
-`Write a Python program that defines one integer, one float, one string, one boolean, and one list.
+`Write a Python program that defines one <strong>integer</strong>, one <strong>float</strong>, one <strong>string</strong>, one <strong>boolean</strong>, and one <strong>list</strong>.
 
-Use descriptive variable names that clearly indicate what each variable represents. If a variable name contains multiple words, separate the words with underscores, such as student_name or triangle_area.
+Use <strong>descriptive variable names</strong> that clearly indicate what each variable represents. If a variable name contains multiple words, separate the words with underscores, such as student_name or triangle_area.
 
 Use any valid values.
 
-Use the print() function and the type() function to print each value and its data type in the following format:
+Use the <strong>print()</strong> function and the <strong>type()</strong> function to print each value and its data type in the following format:
 
-[value] is a [data type]
+\t[value] is a [data type]
 
 Example output:
 
-10 is a <class 'int'>`,
+\t10 is a &lt;class 'int'&gt;`,
 
 `The following Python code calculates the area of a rectangle:
 
-length = 10
-width = 5
-area = length * width
-print("The area of the rectangle is:", area)
+\tlength = 10
+\twidth = 5
+\tarea = length * width
+\tprint("The area of the rectangle is:", area)
 
-Write a Python program that uses the same general idea to calculate the area of a triangle.
+Write a Python program that uses the same general idea to calculate the area of a <strong>triangle</strong>.
 
-Define variables for the base and height of the triangle. Use descriptive variable names, such as triangle_base and triangle_height.
+Define variables for the <strong>base</strong> and <strong>height</strong> of the triangle. Use descriptive variable names, such as triangle_base and triangle_height.
 
 Use the following formula:
 
-area = (base * height) / 2
+\tarea = (base * height) / 2
 
-Use the print() function to display the result in the following format:
+Use the <strong>print()</strong> function to display the result in the following format:
 
-The area of the triangle is: [area]`,
+\tThe area of the triangle is: [area]`,
 
-`Write a Python program that uses a for loop to calculate the sum of all odd numbers from 1 to 100, inclusive.
+`Write a Python program that uses a <strong>for loop</strong> to calculate the sum of all <strong>odd numbers</strong> from 1 to 100, inclusive.
 
-Use an if statement inside the loop to determine whether each number is odd.
+Use an <strong>if statement</strong> inside the loop to determine whether each number is odd.
 
-Hint: A number is even when [number] % 2 == 0.
+Hint: A number is odd when number % 2 != 0.
 
 Use descriptive variable names, such as current_number and odd_number_sum.
 
-Use the print() function to display the result in the following format:
+Use the <strong>print()</strong> function to display the result in the following format:
 
-The sum of all odd numbers from 1 to 100 is: [sum]`,
+\tThe sum of all odd numbers from 1 to 100 is: [sum]`,
 
 `The following Python program calculates and prints the sum of all values in a list:
 
-numbers = [2, 5, 8, 11, 14]
-total = 0
+\tnumbers = [2, 5, 8, 11, 14]
+\ttotal = 0
 
-for current_number in numbers:
-    total += current_number
+\tfor current_number in numbers:
+\t\ttotal += current_number
 
-print("Sum:", total)
+\tprint("Sum:", total)
 
-Rewrite the program using three functions:
+Rewrite the program using <strong>three functions</strong>:
 
-1. A function that accepts a list as a parameter and returns the sum of its elements.
+\t1. A function that accepts a list as a parameter and returns the sum of its elements.
 
-2. A function that accepts the total as a parameter and prints it in the following format:
+\t2. A function that accepts the total as a parameter and prints it in the following format:
 
-Sum of the numbers in the list: [total]
+\t\tSum of the numbers in the list: [total]
 
-3. A main() function that creates the list, calls the first function to calculate the total, and calls the second function to display the result.
+\t3. A main() function that creates the list, calls the first function to calculate the total, and calls the second function to display the result.
 
-Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.
+Use <strong>descriptive function names</strong>, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.
 
 Add comments to identify:
-- lines that perform computation
-- lines that perform print/output`,
 
-`Write two Python functions that calculate the factorial of a non-negative integer n.
+\t- lines that perform computation
+\t- lines that perform print/output`,
 
-One function must use recursion.
+`Write <strong>two Python functions</strong> that calculate the factorial of a non-negative integer n.
 
-One function must use an iterative approach without recursion.
+One function must use <strong>recursion</strong>.
+
+One function must use an <strong>iterative approach</strong> without recursion.
 
 Both functions should accept n as a parameter and return the factorial of n.
 
-Write a main() function that defines a value for n, calls both factorial functions, and prints both results.
+Write a <strong>main()</strong> function that defines a value for n, calls both factorial functions, and prints both results.
 
-After writing both functions, choose which approach you recommend based on readability and efficiency. Add a short comment or docstring explaining your choice in 1-2 sentences.
+After writing both functions, choose which approach you recommend based on <strong>readability</strong> and <strong>efficiency</strong>. Add a short comment or docstring explaining your choice in 1-2 sentences.
 
 Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`,
 
-`Construct a Python program that simulates a basic ATM system using predefined transactions. Do not use the input() function.
+`Construct a Python program that simulates a basic <strong>ATM system</strong> using predefined transactions. Do <strong>not</strong> use the input() function.
 
 Use the following starting balance and transaction list:
 
-starting_balance = 1000
+\tstarting_balance = 1000
 
-transaction_list = [
-    ("deposit", 200),
-    ("withdraw", 150),
-    ("withdraw", 1200),
-    ("deposit", 3000),
-    ("withdraw", 1200),
-    ("deposit", 4000),
-]
+\ttransaction_list = [
+\t\t("deposit", 200),
+\t\t("withdraw", 150),
+\t\t("withdraw", 1200),
+\t\t("deposit", 3000),
+\t\t("withdraw", 1200),
+\t\t("deposit", 4000),
+\t]
 
 Your program must include the following functions:
 
-deposit_money(current_balance, transaction_amount)
+<strong>deposit_money(current_balance, transaction_amount)</strong>
 
 This function should:
-- accept the current account balance and the deposit amount as parameters
-- increase the account balance by the deposit amount
-- return the updated balance
 
-withdraw_money(current_balance, transaction_amount)
+\t- accept the current account balance and the deposit amount as parameters
+\t- increase the account balance by the deposit amount
+\t- return the updated balance
 
-This function should:
-- accept the current account balance and the withdrawal amount as parameters
-- decrease the account balance only if sufficient funds are available
-- return two values: the updated balance and whether the withdrawal was successful
-- print the following message if funds are insufficient:
-
-Withdrawal denied. Insufficient funds.
-
-main()
+<strong>withdraw_money(current_balance, transaction_amount)</strong>
 
 This function should:
-- define starting_balance
-- define transaction_list
-- use a for loop to process every transaction
-- use if statements to determine the transaction type
-- call deposit_money() for deposit transactions
-- call withdraw_money() for withdrawal transactions
-- print a message after every successful deposit or withdrawal
-- print the final account balance after all transactions have been processed
+
+\t- accept the current account balance and the withdrawal amount as parameters
+\t- decrease the account balance only if sufficient funds are available
+\t- return two values: the updated balance and whether the withdrawal was successful
+\t- print the following message if funds are insufficient:
+
+\tWithdrawal denied. Insufficient funds.
+
+<strong>main()</strong>
+
+This function should:
+
+\t- define starting_balance
+\t- define transaction_list
+\t- use a for loop to process every transaction
+\t- use if statements to determine the transaction type
+\t- call deposit_money() for deposit transactions
+\t- call withdraw_money() for withdrawal transactions
+\t- print a message after every successful deposit or withdrawal
+\t- print the final account balance after all transactions have been processed
 
 After every successful deposit or withdrawal, print the transaction information in the following format:
 
-Transaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]
+\tTransaction: [transaction_type], Amount: [transaction_amount], Balance: [current_balance]
 
 Example:
 
-Transaction: deposit, Amount: 200, Balance: 1200
+\tTransaction: deposit, Amount: 200, Balance: 1200
 
 After all transactions have been processed, print:
 
-Final account balance: [final_balance]
+\tFinal account balance: [final_balance]
 
 Use descriptive function names, parameter names, and variable names. If a name contains multiple words, separate the words with underscores.`
   ],
