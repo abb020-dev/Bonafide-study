@@ -240,12 +240,12 @@ h3 {
 }
 
 .question-text ul {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  /*margin-top: 8px;
+  margin-bottom: 8px; */
   padding-left: 32px;
 }
 
 .question-text li {
-  margin-bottom: 4px;
+  /*margin-bottom: 4px; */
   padding-left: 4px;
 }
