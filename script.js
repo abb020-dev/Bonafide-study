@@ -110,12 +110,13 @@ Use <strong>descriptive variable names</strong> that clearly indicate what each 
 Use any valid values.
 
 Use the <strong>print()</strong> function and the <strong>type()</strong> function to print each value and its data type in the following format:
-
-\t[value] is a [data type]
-
+<ul>
+  <li>[value] is a [data type]</li>
+</ul>
 Example output:
-
-\t10 is a &lt;class 'int'&gt;`,
+<ul>
+  <li>10 is a &lt;class 'int'&gt;</li>
+</ul>`,
 
 `The following Python code calculates the area of a rectangle:
 
@@ -129,12 +130,13 @@ Write a Python program that uses the same general idea to calculate the area of 
 Define variables for the <strong>base</strong> and <strong>height</strong> of the triangle. Use descriptive variable names, such as triangle_base and triangle_height.
 
 Use the following formula:
-
-\tarea = (base * height) / 2
-
+<ul>
+  <li>area = (base * height) / 2</li>
+</ul>
 Use the <strong>print()</strong> function to display the result in the following format:
-
-\tThe area of the triangle is: [area]`,
+<ul>
+  <li>The area of the triangle is: [area]</li>
+</ul>`,
 
 `Write a Python program that uses a <strong>for loop</strong> to calculate the sum of all <strong>odd numbers</strong> from 1 to 100, inclusive.
 
@@ -145,8 +147,9 @@ Hint: A number is even when number % 2 == 0.
 Use descriptive variable names.
 
 Use the <strong>print()</strong> function to display the result in the following format:
-
-\tThe sum of all odd numbers from 1 to 100 is: [sum]`,
+<ul>
+  <li>The sum of all odd numbers from 1 to 100 is: [sum]</li>
+</ul>`,
 
 `The following Python program calculates and prints the sum of all values in a list:
 
@@ -169,13 +172,11 @@ Use <strong>descriptive names</strong> for functions, parameters, and variables.
 Add comments to identify lines that perform <strong>computation</strong> and lines that perform <strong>print/output</strong>.`,
 
 `Write <strong>two Python functions</strong> that calculate the factorial of a non-negative integer n.
-
-One function must use <strong>recursion</strong>.
-
-One function must use an <strong>iterative approach</strong> without recursion.
-
-Both functions should accept n as a parameter and return the factorial of n.
-
+<ul>
+  <li>one function must use <strong>recursion</strong></li>
+  <li>one function must use an <strong>iterative approach</strong> without recursion</li>
+  <li>both functions should accept n as a parameter and return the factorial of n</li>
+</ul>
 Write a <strong>main()</strong> function that defines a value for n, calls both factorial functions, and prints both results.
 
 After writing both functions, choose which approach you recommend based on <strong>readability</strong> and <strong>efficiency</strong>, and add a short <strong>docstring</strong> in your chosen function explaining your choice in 1-2 sentences.
