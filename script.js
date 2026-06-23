@@ -173,9 +173,9 @@ Add comments to identify lines that perform <strong>computation</strong> and lin
 
 `Write <strong>two Python functions</strong> that calculate the factorial of a non-negative integer n:
 <ul>
-  <li>one function must use <strong>recursion</strong></li>
-  <li>one function must use an <strong>iterative approach</strong> without recursion</li>
-  <li>both functions should accept n as a parameter and return the factorial of n</li>
+  <li>One function must use <strong>recursion</strong></li>
+  <li>One function must use an <strong>iterative approach</strong> without recursion</li>
+  <li>Both functions should accept n as a parameter and return the factorial of n</li>
 </ul>
 Write a <strong>main()</strong> function that defines a value for n, calls both factorial functions, and prints both results.
 
