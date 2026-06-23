@@ -227,7 +227,7 @@ input[type="radio"], input[type="number"], select {
   margin-bottom: 10px;
 }
 h3 {
-  white-space: pre-wrap;
+  white-space: pre-line;
   font-size: 18px;
 }
 
